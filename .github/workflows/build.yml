@@ -1,0 +1,21 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+      - name: Build
+        run: |
+          npm install
+          npm run build
+      - name: Push
+        run: |
+          rsync -avz --delete -e "ssh -i <(echo '${{ secrets.SSH_PRIV_KEY }}')" ./dist/* ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/bj/fr/
+
