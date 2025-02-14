@@ -1,0 +1,81 @@
+.userhand {
+    position: relative;
+}
+
+.cards {
+    height: var(--card-height);
+    display: flex;
+    justify-content: center;
+    transition: 0.2s ease-in-out;
+    // background-color: red;
+    width: calc(100vw - 32px);
+}
+.cardWrapper {
+    $rotateValue: -5deg;
+    width: var(--card-width);
+    height: var(--card-height);
+    border-radius: var(--card-border-radius);
+    transition: 0.2s ease-in-out;
+    position: absolute;
+
+    left: 50%;
+    transform: translateX(-50%) rotate($rotateValue);
+
+    &:nth-child(1) {
+        transform: translateX(calc(-50% - 40px)) rotate($rotateValue);
+    }
+    &:nth-child(2) {
+        transform: translateX(-50%) rotate($rotateValue);
+    }
+    &:nth-child(3) {
+        transform: translateX(calc(-50% + 40px)) rotate($rotateValue);
+    }
+
+    &:nth-child(4) {
+        transform: translateX(calc(-50% - 50px)) rotate($rotateValue);
+    }
+    &:nth-child(5) {
+        transform: translateX(calc(-50% - 10px)) rotate($rotateValue);
+    }
+    &:nth-child(6) {
+        transform: translateX(calc(-50% + 30px)) rotate($rotateValue);
+    }
+}
+
+
+.points {
+    position: absolute;
+    top: -90px;
+    right: 50%;
+    transform: translateX(50%);
+    font-size: 22px;
+    font-weight: 800;
+    color: white;
+    text-shadow: 0 0px 10px rgba(255, 255, 255, 0.501);
+}
+
+.bjImage {
+    position: absolute;
+    rotate: 20deg;
+    z-index: 10;
+    top: -70px;
+    left: 50%;
+    
+    &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+        width: 170px;
+        height: 120px;
+        background: radial-gradient(rgba(0, 0, 0, 0.2) 0%, transparent 60%);
+    }
+
+    img {
+        position: relative;
+        z-index: 5;
+        width: 100px;
+    }
+}

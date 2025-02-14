@@ -1,0 +1,56 @@
+.wrapper {
+	position: fixed;
+	top: var(--tg-padding-top) ;
+	right: 16px;
+	border-radius: 100px;
+	z-index: 10000;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 6px;
+	transition: .3s ease-in-out;
+}
+
+.item {
+	background-color: red;
+	padding: 10px 40px 10px 20px;
+	font-size: 12px;
+	color: rgb(43, 43, 43);
+	border-radius: 6px;
+	position: relative;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+	max-width: 320px;
+	width: fit-content;
+	font-weight: 700;
+}
+
+.title {
+	font-size: 14px;
+	color: black;
+	font-weight: 700;
+}
+
+.description {
+	font-size: 12px;
+	color: rgb(43, 43, 43);
+	font-weight: 500;
+}
+
+.close {
+	position: absolute;
+	top: 4px;
+	right: 4px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 4px;
+	border-radius: 100px;
+	cursor: pointer;
+	background-color: rgba(0, 0, 0, 0.1);
+
+	svg {
+		width: 12px;
+		height: 12px;
+		fill: black;
+	}
+}

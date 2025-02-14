@@ -1,0 +1,178 @@
+$border: 3px solid rgba(255, 255, 255, 0.3);
+$padding: 12px;
+
+.table {
+    background-color: rgb(40, 61, 0);
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+
+    .light {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        top: 50%;
+        left: 50%;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        background: radial-gradient(rgba(255, 255, 255, 0.1) 1%, transparent 90%);
+    }
+}
+
+.gameBank {
+    position: fixed;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    border: 3px solid rgba(218, 165, 32, 0.596);
+    border-radius: 100px;
+
+    padding: 4px 12px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    .bank {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 10px;
+        line-height: 12px;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+
+    p {
+        line-height: 14px;
+        font-size: 16px;
+        color: goldenrod;
+        font-weight: 800;
+    }
+
+    span {
+        color: white;
+        font-weight: 700;
+        font-size: 14px;
+    }
+}
+
+.gameButtons {
+
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 6px;
+    right: 16px;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    .button {
+        width: 80px;
+        height: 80px;
+        border-radius: 100px;
+        background-color: #0098ea;
+        text-transform: uppercase;
+        font-size: 13px;
+        color: white;
+        font-weight: 600;
+        // box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.1);
+        border: 2px solid #225069;
+
+        &:nth-child(1) {
+            background-color: #0098ea;
+        }
+    }
+}
+
+.startWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100vw - 32px);
+    max-width: 600px;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: calc(max(20px, var(--tg-safe-area-inset-bottom)) + 80px);
+}
+
+.startbtn {
+    background-color: gold;
+    border: 2px solid goldenrod;
+    box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.1);
+
+    font-weight: 800;
+    text-transform: uppercase;
+    height: 40px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 30px;
+    border-radius: 100px;
+}
+
+.chipsList {
+    display: flex;
+    gap: 7px;
+}
+
+.bet {
+    width: calc(100vw - 32px);
+    max-width: 600px;
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+
+.betPlace {
+    width: 50%;
+}
+
+
+
+.betValue {
+    line-height: 36px;
+    font-size: 32px;
+    font-weight: 800;
+    margin: 0 auto;
+    color: goldenrod;
+}
+
+.yourBet {
+    border: $border;
+    padding: $padding;
+    border-radius: 14px;
+}
+
+.clearbet {
+    width: 100%;
+    border: $border;
+    border-radius: 14px;
+    padding: $padding;
+    margin-top: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    svg {
+        fill: rgba(255, 255, 255, 0.5);
+    }
+}
+
+.title {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 800;
+}

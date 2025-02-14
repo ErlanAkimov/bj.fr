@@ -1,0 +1,178 @@
+.wrapper {
+    padding-inline: 16px;
+    max-height: 100vh;
+    height: 100vh;
+    background-color: black;
+    overflow-y: scroll;
+    padding-bottom: 120px;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.title {
+    text-align: center;
+    color: goldenrod;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.historyTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    padding-inline: 16px;
+    margin: 0 auto;
+}
+
+.historyList {
+    margin: 10px auto 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 600px;
+}
+
+.stats {
+    max-width: 600px;
+    margin: 10px auto 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    .statItem {
+        background-color: #121212;
+        position: relative;
+        width: 100%;
+        border-radius: 6px;
+        padding: 10px;
+        height: 130px;
+
+        .divs {
+            font-size: 13px;
+            font-weight: 500;
+            color: #8051b0;
+
+            span {
+                font-weight: 800;
+                font-size: 22px;
+            }
+        }
+
+        .cash {
+            @extend .divs;
+            color: #e5576f;
+        }
+
+        .tag {
+            color: white;
+            font-size: 14px;
+            margin-top: 4px;
+        }
+
+        .soon {
+            color: white;
+            font-size: 10px;
+            text-decoration: underline;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+    }
+}
+.text {
+    color: rgba(199, 199, 199, 0.726);
+    font-size: 12px;
+    line-height: 13px;
+    font-weight: 400;
+    margin-top: 4px;
+}
+
+
+
+.item {
+    width: 100%;
+    background-color: #121212;
+    border-radius: 6px;
+    padding: 10px;
+    position: relative;
+    box-shadow: 0 2px 10px 0 rgba(15, 15, 15, 0.5);
+}
+
+.date {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: rgb(255, 47, 47);
+    color: rgba(214, 214, 214, 0.753);
+    font-weight: 600;
+    font-size: 10px;
+}
+
+.value {
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    font-weight: 800;
+}
+
+.winner {
+    font-weight: 700;
+    color: rgb(0, 128, 0);
+}
+
+.loser {
+    @extend .winner;
+    color: rgb(160, 11, 11);
+}
+
+.result {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4px;
+    gap: 12px;
+    width: fit-content;
+
+    .member {
+        line-height: 14px;
+        color: rgb(196, 196, 196);
+        font-size: 12px;
+        font-weight: 600;
+    }
+    .userId {
+        @extend .member;
+        color: goldenrod;
+    }
+
+    span {
+        font-weight: 900;
+        font-size: 14px;
+    }
+}
+
+.gameType {
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+}
+
+.empty {
+    background-color: var(--bg-panel-color);
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: rgb(156, 156, 156);
+    font-size: 14px;
+    font-weight: 400;
+}

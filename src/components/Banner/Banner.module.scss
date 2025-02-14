@@ -1,0 +1,48 @@
+.banner {
+    width: 100%;
+    height: 120px;
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+    position: relative;
+
+	background-image: url("../../../public/banner-image.webp");
+	background-size: cover;
+	background-position: center;
+	border: 1px solid rgba(218, 165, 32, 0.3);
+	box-shadow: 0 0 10px 3px rgba(218, 165, 32, 0.2);
+}
+
+.soon {
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    position: absolute;
+    bottom : 10px;
+    right: 20px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+
+}
+
+.content {
+
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+
+    height: 100%;
+	border-radius: 12px;
+}
+
+.title {
+    color: goldenrod;
+}
+
+.description {
+    color: rgba(187, 241, 255, 0.74);
+    font-size: 12px;
+    font-weight: 500;
+
+    span {
+        color: white;
+    }
+}

@@ -1,0 +1,163 @@
+.walletPage {
+    background-color: black;
+    height: 100vh;
+    max-height: 100vh;
+    padding-bottom: 100px;
+    padding-top: var(--tg-padding-top);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.content {
+    width: calc(100% - 32px);
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 16px;
+    background-color: #181818;
+    border-radius: 12px;
+}
+
+.profile {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 12px;
+}
+
+.leftside {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.title {
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.wallet {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.486);
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.balance {
+    &Text {
+        text-align: right;
+        font-size: 10px;
+        color: rgba(255, 255, 255, 0.4);
+    }
+
+    &Amount {
+        text-align: right;
+        font-size: 30px;
+        font-weight: 800;
+        color: goldenrod;
+    }
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+    margin-top: 10px;
+
+    button {
+        background-color: goldenrod;
+        color: black;
+        border-radius: 12px;
+        width: 100%;
+        height: 40px;
+    }
+}
+
+.ref {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.share {
+    color: goldenrod;
+}
+
+.ordersBlock {
+    max-width: 600px;
+    width: calc(100% - 32px);
+    margin: 0 auto;
+
+    .title {
+        color: goldenrod;
+    }
+}
+
+.ordersList {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 10px;
+    overflow-y: scroll;
+    max-height: calc(100vh - var(--tg-padding-top) - 100px - 132px);
+    padding-bottom: 100px;
+    min-height: 200px;
+}
+
+.orderSkeleton {
+    width: 100%;
+    height: 45px;
+    border-radius: 12px;
+    background-color: var(--bg-panel-color);
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 0.1px;
+        height: 100px;
+        animation: loading 1s infinite;
+        box-shadow: 0 0 30px 10px rgba(126, 126, 126, 0.1);
+        rotate: 20deg;
+    }
+}
+
+
+@keyframes loading {
+    0% {
+        left: -20%;
+    }
+    100% {
+        left: 120%;
+    }
+}
+

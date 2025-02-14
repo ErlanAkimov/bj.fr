@@ -1,0 +1,100 @@
+.infoPlace {
+    border: 3px solid goldenrod;
+    height: 100%;
+    width: 50%;
+    border-radius: 14px;
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 12px;
+}
+
+.title {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 800;
+}
+
+.balance {
+    &Value {
+        line-height: 36px;
+        font-size: 32px;
+        font-weight: 800;
+        white-space: nowrap;
+        margin: 0 auto;
+        color: goldenrod;
+        span {
+            font-size: 18px;
+            color: white;
+        }
+    }
+}
+
+.depBtn {
+    width: 100%;
+    border: 2px solid goldenrod;
+    background-color: goldenrod;
+
+    border-radius: 100px;
+    padding: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+	box-shadow: 0 0 10px 0 rgba(255, 215, 0, 0.5);
+	animation: glow 1.5s infinite;
+}
+
+.shake {
+	animation: shake 0.5s;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px 0 rgba(255, 215, 0, 0.5);
+    }
+	50% {
+        box-shadow: 0 0 20px 0 rgba(255, 215, 0, 0.5);
+    }
+	100% {
+        box-shadow: 0 0 10px 0 rgba(255, 215, 0, 0.5);
+    }
+}
+
+@keyframes shake {
+	$shake-distance: 2px;
+	0% {
+		transform: translateX(-$shake-distance)
+	}
+	10% {
+		transform: translateX($shake-distance)
+	}
+	20% {
+		transform: translateX(-$shake-distance)
+	}
+	30% {
+		transform: translateX($shake-distance)
+	}
+	40% {
+		transform: translateX(-$shake-distance)
+	}
+	50% {
+		transform: translateX($shake-distance)
+	}
+	60% {
+		transform: translateX(-$shake-distance)
+	}
+	70% {
+		transform: translateX($shake-distance)
+	}
+	80% {
+		transform: translateX(-$shake-distance)
+	}
+	90% {
+		transform: translateX($shake-distance)
+	}
+	100% {
+		transform: translateX(0)
+	}
+}
+

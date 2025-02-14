@@ -1,0 +1,42 @@
+{
+    "name": "blackjack-game",
+    "private": true,
+    "version": "0.1a",
+    "type": "module",
+    "scripts": {
+        "dev": "vite --host",
+        "build": "tsc -b && vite build && bash -c \"rsync -avz --delete ./dist/* vps:/bj/fr/\"",
+        "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "@reduxjs/toolkit": "^2.2.6",
+        "@ton/core": "^0.56.3",
+        "@ton/crypto": "^3.3.0",
+        "@ton/ton": "^13.11.2",
+        "@tonconnect/ui-react": "^2.0.6",
+        "@types/react-redux": "^7.1.33",
+        "axios": "^1.7.2",
+        "motion": "^12.4.0",
+        "node-stdlib-browser": "^1.2.0",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "react-router-dom": "^6.24.1",
+        "react-unity-webgl": "^9.7.0",
+        "vite-plugin-node-stdlib-browser": "^0.2.1"
+    },
+    "devDependencies": {
+        "@types/node": "^22.1.0",
+        "@types/react": "^18.3.3",
+        "@types/react-dom": "^18.3.0",
+        "@typescript-eslint/eslint-plugin": "^7.13.1",
+        "@typescript-eslint/parser": "^7.13.1",
+        "@vitejs/plugin-react": "^4.3.1",
+        "eslint": "^8.57.0",
+        "eslint-plugin-react-hooks": "^4.6.2",
+        "eslint-plugin-react-refresh": "^0.4.7",
+        "sass": "^1.77.8",
+        "typescript": "^5.2.2",
+        "vite": "^4.0.0"
+    }
+}

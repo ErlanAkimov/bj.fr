@@ -1,0 +1,25 @@
+.task {
+    border-radius: 4px;
+    background-color: goldenrod;
+    padding: 5px 16px 5px 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+}
+
+.done {
+    width: 18px;
+}
+
+.title {
+    font-size: 14px;
+    font-weight: 600;
+	text-transform: uppercase;
+}
+
+.price {
+	font-size: 12px;
+	font-weight: 700;
+}

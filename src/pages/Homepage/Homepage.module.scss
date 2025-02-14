@@ -1,0 +1,125 @@
+.wrapper {
+    padding-top: var(--tg-padding-top);
+    padding-inline: 16px;
+}
+
+.section {
+    padding: 12px 20px;
+    border-radius: 8px;
+    background-color: var(--bg-panel-color);
+    width: 100%;
+
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.blackJackImage {
+    rotate: -22deg;
+    width: 140px;
+    position: absolute;
+    right: -20px;
+    bottom: -50px;
+}
+.battleIcon {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+        width: 16px;
+        height: 16px;
+
+        path {
+            position: relative;
+            z-index: 1;
+            opacity: 1;
+            fill: goldenrod;
+        }
+    }
+}
+.currentGame {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 12px;
+    left: 20px;
+    gap: 10px;
+    background-color: rgba(218, 165, 32, 0.3);
+    padding: 4px 6px;
+    border-radius: 4px;
+
+    p {
+        font-size: 14px;
+        line-height: 16px;
+        color: white;
+        font-weight: 900;
+    }
+
+    .smile {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -26px;
+    }
+}
+
+.content {
+    margin-top: 10px;
+}
+
+.title {
+    color: white;
+    font-size: 19px;
+    line-height: 19px;
+}
+
+.sections {
+    display: flex;
+    margin-top: 10px;
+    gap: 10px;
+    
+    .slots {
+        opacity: .7;
+        background-color: var(--bg-panel-color);
+        width: 100%;
+        height: 100px;
+        border-radius: 8px;
+        overflow: hidden;
+        position: relative;
+        padding: 12px 20px;
+
+        .slotsImage {
+            position: absolute;
+            right: -10px;
+            width: 100px;
+            rotate: -16deg;
+            top: 24px;
+        }
+    }
+
+    .tournaments {
+        opacity: .7;
+
+        background-color: var(--bg-panel-color);
+        width: 100%;
+        height: 100px;
+        border-radius: 8px;
+        padding: 12px 20px;
+        
+    
+    }
+}
+
+.text {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 12px;
+    line-height: 13px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
