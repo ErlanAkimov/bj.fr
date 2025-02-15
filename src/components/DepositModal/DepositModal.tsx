@@ -12,7 +12,7 @@ const DepositModal: React.FC = () => {
     const dispatch = useAppDispatch();
     const app = useAppSelector((state) => state.app);
     const [tc] = useTonConnectUI();
-    const [ton, setTon] = useState<string>("");
+    const [ton, setTon] = useState<string>("0.");
     const [loading, setLoading] = useState<boolean>(false);
 
     const closeModal = () => {
@@ -20,11 +20,18 @@ const DepositModal: React.FC = () => {
     };
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        try {
-            const value = e.target.value;
-            // toNano(value).toString();
-            setTon(value);
-        } catch {}
+        let value = e.target.value;
+
+        if (value.includes(",")) {
+            value = value.replace(",", ".");
+        }
+
+        // Проверка на наличие только цифр и точки
+        if (/^[0-9]*\.?[0-9]*$/.test(value) || value === "") {
+            try {
+                setTon(value);
+            } catch {}
+        }
     };
 
     const handleSendTransaction = () => {
@@ -52,7 +59,7 @@ const DepositModal: React.FC = () => {
                             notificationId: res.data.order.orderId,
                             title: "Transaction in process",
                             description: "We are processing your transaction, it will be completed in 1-2 minutes",
-                            icon: 'good'
+                            icon: "good",
                         })
                     );
                     dispatch(pushOrder(res.data.order));
@@ -77,7 +84,12 @@ const DepositModal: React.FC = () => {
                         <h3 className={styles.title}>Deposit</h3>
                         <div className={styles.input}>
                             <p className={styles.text}>TON AMOUNT</p>
-                            <input pattern="^\d+(\.\d+)?$" inputMode="decimal" value={ton} onChange={handleChange} type="number" />
+                            <input
+                                value={ton}
+                                onChange={handleChange}
+                                type="number"
+                                inputMode="decimal"
+                            />
                         </div>
 
                         <button className={styles.btn} onClick={handleSendTransaction}>

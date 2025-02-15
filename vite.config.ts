@@ -33,12 +33,12 @@ export default defineConfig(({ mode }) => {
         server: {
             proxy: {
                 "/api": {
-                    target: "http://localhost:9000",
+                    target: "http://192.168.0.105:3021",
                     changeOrigin: true,
                     secure: true,
                 },
                 "/wss": {
-                    target: "ws://192.168.0.105:9001",
+                    target: "ws://192.168.0.105:3022",
                     changeOrigin: true,
                     secure: true,
                 },

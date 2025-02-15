@@ -21,7 +21,7 @@ const History: React.FC = () => {
 
     return (
         <div className={styles.wrapper} style={tgPaddingTop}>
-            <h3 className={styles.title}>Join to game pass</h3>
+            <h3 className={styles.title}>Join to B21 Investors</h3>
             <div className={styles.stats}>
                 <Link to={"/wallet"} className={styles.statItem}>
                     <p className={styles.divs}>
@@ -29,7 +29,7 @@ const History: React.FC = () => {
                     </p>
                     <p className={styles.tag}>Public</p>
                     <p className={styles.text}>
-                        Receive 10% of the profits from <span>Daytona</span>. Dividends are credited monthly.
+                        Receive 10% from <span>B21 project</span> profits. Dividends are credited monthly.
                     </p>
                     <div className={styles.soon}>soon</div>
                 </Link>
@@ -49,9 +49,9 @@ const History: React.FC = () => {
                 <p className={styles.text}>last 20 games</p>
             </div>
             <div className={styles.historyList}>
-                {
+                {/* {
                     history.games === null && <div className={styles.loading}></div>
-                }
+                } */}
                 {history.games !== null && history.games.length > 0 ? (
                     history.games.map((i) => (
                         <div className={styles.item} key={i.gameId}>

@@ -1,5 +1,5 @@
 import React from "react";
-import { OrderType } from "../../types/cardType";
+import { OrderType } from "../../types/types";
 import styles from "./HistoryList.module.scss";
 import { DownloadIcon, UploadIcon } from "../../components/icons";
 interface HistoryListProps {

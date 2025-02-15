@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { GameType, OrderType } from "../../types/cardType";
+import { GameType, OrderType } from "../../types/types";
 
 export interface HistorySliceInterface {
     games: GameType[] | null;

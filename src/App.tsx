@@ -20,7 +20,9 @@ import DepositModal from "./components/DepositModal/DepositModal";
 // hooks
 import { useFindMyGame } from "./hooks/useFindMyGame";
 import WithdrawModal from "./components/WithdrawModal/WithdrawModal";
-// import useWs from "./hooks/useWs";
+import useWs from "./hooks/useWs";
+import FaqStories from "./components/FaqStories/FaqStories";
+
 
 const App: React.FC = () => {
     const dispatch = useAppDispatch();
@@ -29,17 +31,18 @@ const App: React.FC = () => {
     const ref = searchParams.get("tgWebAppStartParam");
 
     useEffect(() => {
-        let point = ref ? `auth/user?ref=${ref}` : "auth/user";
+        let point = ref ? `/auth/user?ref=${ref}` : "/auth/user";
         api.get(point).then((res) => {
             dispatch(setUser(res.data));
         });
     }, []);
 
     useFindMyGame();
-    // useWs();
+    useWs();
 
     return (
         <div className={styles.app}>
+            <FaqStories />
 
             <Notifications />
             <DepositModal />

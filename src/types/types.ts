@@ -46,3 +46,16 @@ export type OrderType = {
     userId: number;
     status: "pending" | "complete" | "fraud";
 }
+
+export type TaskType  ={
+    taskId: string;
+    type: "daily" | "one-time";
+    title: "string";
+    reward: number;
+    verificationMethod: "telegram" | null;
+    link: string;
+    priority: number;
+    isComplete: boolean;
+    chatId: string;
+    lastClaim: number;
+}

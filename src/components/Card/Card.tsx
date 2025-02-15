@@ -3,7 +3,7 @@ import styles from "./Card.module.scss";
 import useCardSuitIcon from "../useCardSuitIcon";
 import { motion } from "motion/react";
 import backImage from "/card-back.webp";
-import { CardType } from "../../types/cardType";
+import { CardType } from "../../types/types";
 
 type CardProps = CardType & {
     index: number;

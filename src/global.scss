@@ -6,6 +6,10 @@
 	outline: none;
 	box-sizing: border-box;
 	user-select: none;
+	-webkit-user-select: none; /* Для iOS */
+	-moz-user-select: none;    /* Для Firefox */
+	-ms-user-select: none;     /* Для Internet Explorer */
+
 	font-family: var(--main-font);
 	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 	-webkit-tap-highlight-color: transparent;
@@ -22,6 +26,7 @@
 	--ton-main-color: #0098EA;
 
 	--tg-padding-top: calc(var(--tg-safe-area-inset-top) + 44px);
+	--tg-top: calc(var(--tg-safe-area-inset-top) + 44px);
 	--tg-bottom: var(--tg-content-safe-area-inset-bottom);
 
 	--bg-panel-color: #181818;
@@ -59,4 +64,13 @@ a {
 
 .wrapper {
 	background-color: #fff;
+}
+
+@keyframes loading {
+    0% {
+        left: -20%;
+    }
+    100% {
+        left: 120%;
+    }
 }

@@ -22,10 +22,18 @@ const WithdrawModal: React.FC = () => {
     };
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        try {
-            const value = e.target.value;
-            setTon(value);
-        } catch {}
+        let value = e.target.value;
+
+        if (value.includes(",")) {
+            value = value.replace(",", ".");
+        }
+
+        // Проверка на наличие только цифр и точки
+        if (/^[0-9]*\.?[0-9]*$/.test(value) || value === "") {
+            try {
+                setTon(value);
+            } catch {}
+        }
     };
 
     const handleSendTransaction = () => {
@@ -57,21 +65,25 @@ const WithdrawModal: React.FC = () => {
             })
             .catch((error) => {
                 if (error.response.data.error === "Insufficient balance") {
-                    dispatch(pushNotification({
-                        notificationId: new Date().getTime().toString(),
-                        title: "Error!",
-                        description: "Not enough balance to withdraw",
-                        icon: "bad",
-                    }));
+                    dispatch(
+                        pushNotification({
+                            notificationId: new Date().getTime().toString(),
+                            title: "Error!",
+                            description: "Not enough balance to withdraw",
+                            icon: "bad",
+                        })
+                    );
                 }
 
                 if (error.response.data.error === "Internal server error") {
-                    dispatch(pushNotification({
-                        notificationId: new Date().getTime().toString(),
-                        title: "Error!",
-                        description: "Internal server error",
-                        icon: "bad",
-                    }));
+                    dispatch(
+                        pushNotification({
+                            notificationId: new Date().getTime().toString(),
+                            title: "Error!",
+                            description: "Internal server error",
+                            icon: "bad",
+                        })
+                    );
                 }
                 setLoading(false);
             });
@@ -109,13 +121,7 @@ const WithdrawModal: React.FC = () => {
                         <h3 className={styles.title}>Withdraw</h3>
                         <div className={styles.input}>
                             <p className={styles.text}>AMOUNT</p>
-                            <input
-                                pattern="^\d+(\.\d+)?$"
-                                inputMode="decimal"
-                                value={ton}
-                                onChange={handleChange}
-                                type="number"
-                            />
+                            <input inputMode="decimal" value={ton} onChange={handleChange} type="number" />
                         </div>
 
                         <button className={styles.btn} onClick={handleSendTransaction}>

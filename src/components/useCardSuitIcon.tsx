@@ -1,4 +1,4 @@
-import { SuitType } from "../types/cardType";
+import { SuitType } from "../types/types";
 
 const useCardSuitIcon = (suit: SuitType) => {
     if (suit === "spades") {

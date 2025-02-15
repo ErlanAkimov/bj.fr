@@ -60,7 +60,6 @@ $padding: 12px;
 }
 
 .gameButtons {
-
     position: fixed;
     display: flex;
     align-items: center;
@@ -134,12 +133,9 @@ $padding: 12px;
     gap: 10px;
 }
 
-
 .betPlace {
     width: 50%;
 }
-
-
 
 .betValue {
     line-height: 36px;
@@ -175,4 +171,22 @@ $padding: 12px;
     font-size: 14px;
     color: rgba(255, 255, 255, 0.5);
     font-weight: 800;
+}
+
+.howplay {
+    color: white;
+    position: absolute;
+    top: calc(var(--tg-top) + 20px);
+    right: 20px;
+    border-radius: 100px;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    font-weight: 500;
+
+    padding: 3px;
+    padding-left: 12px;
+    opacity: .7;
 }

@@ -1,4 +1,4 @@
-import { CardType } from "../../types/cardType";
+import { CardType } from "../../types/types";
 
 const calculateHandPoints = (hand: CardType[]) => {
     let points = 0;

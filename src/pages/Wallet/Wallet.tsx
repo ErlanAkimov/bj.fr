@@ -30,7 +30,7 @@ const Wallet: React.FC = () => {
 
     const share = () => {
         window.Telegram.WebApp.openTelegramLink(
-            `https://t.me/share/url?url=https://t.me/${import.meta.env.VITE_BOT_NAME}?start=${
+            `https://t.me/share/url?url=https://t.me/b21_project_bot?start=${
                 window.Telegram.WebApp.initDataUnsafe.user.id
             }`
         );
@@ -85,7 +85,7 @@ const Wallet: React.FC = () => {
             </div>
 
             <div className={`${styles.content} ${styles.ref}`} onClick={share}>
-                <div className={styles.link}>https://t.me/{import.meta.env.VITE_BOT_NAME}</div>
+                <div className={styles.link}>https://t.me/b21_project_bot</div>
                 <button className={styles.share}>Invite Frens</button>
             </div>
 

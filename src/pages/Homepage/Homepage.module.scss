@@ -81,9 +81,8 @@
     display: flex;
     margin-top: 10px;
     gap: 10px;
-    
+
     .slots {
-        opacity: .7;
         background-color: var(--bg-panel-color);
         width: 100%;
         height: 100px;
@@ -102,15 +101,11 @@
     }
 
     .tournaments {
-        opacity: .7;
-
         background-color: var(--bg-panel-color);
         width: 100%;
         height: 100px;
         border-radius: 8px;
         padding: 12px 20px;
-        
-    
     }
 }
 
@@ -122,4 +117,42 @@
     display: flex;
     align-items: center;
     gap: 4px;
+}
+
+.farm {
+    margin-top: 10px;
+
+    .title {
+        color: goldenrod;
+        font-weight: 800;
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+
+    .token {
+        color: goldenrod;
+        font-size: 190px;
+        font-weight: 900;
+        position: absolute;
+        top: 50%;
+        right: 0px;
+        transform: translateY(-55%);
+        z-index: 0;
+        opacity: 0.1;
+        font-style: italic;
+    }
+
+    .text {
+        color: white;
+        font-size: 12px;
+        text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        line-height: 14px;
+        margin-top: 4px;
+        display: block;
+    }
+
+    .b21 {
+        color: goldenrod;
+        font-weight: 700;
+    }
 }

@@ -14,7 +14,7 @@ const GameHands: React.FC = () => {
 
 			<div className={styles.gameBank}>
 				<p className={styles.bank}>bank</p>	
-                <p>{game.bet * 2}<span> TON</span></p>
+                <p>{(game.bet * 2).toFixed(2)}<span> TON</span></p>
 				
             </div>
 			<UserHand />

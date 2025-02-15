@@ -4,7 +4,7 @@ import { AnimatePresence, Reorder } from "motion/react";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
 import { CloseIcon } from "../icons";
 import { removeNotification, updateNotificationOrder } from "../../redux/slices/appSlice";
-import { NotificationInterface } from "../../types/cardType";
+import { NotificationInterface } from "../../types/types";
 
 const Notifications: React.FC = () => {
     const notifications = useAppSelector((state) => state.app.notifications);

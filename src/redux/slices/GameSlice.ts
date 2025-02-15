@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { CardType } from "../../types/cardType";
+import { CardType } from "../../types/types";
 
 const chips = [
     {
